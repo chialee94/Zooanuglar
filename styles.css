@@ -1,0 +1,192 @@
+/* Reset & Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #282828;
+  line-height: 1.6;
+  margin: 20px; /* spacing around content */
+  position: relative; /* needed for absolute highlights */
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #22c1c3;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+form input, form select, form button {
+  margin: 5px;
+  padding: 5px;
+}
+/* Forms */
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit Buttons */
+input[type="submit"] {
+  background: #22c1c3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background: #199ea0;
+  transform: scale(1.02);
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+  position: relative; /* for highlight positioning */
+}
+
+ul li,
+animal-card {
+  margin-bottom: 10px;
+}
+
+/* Feedback & Error Messages */
+.error,
+#animal-feedback {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.error {
+  color: #ff453a;
+}
+
+#animal-feedback {
+  color: #22c1c3; /* default color for success, can be overridden in JS */
+}
+
+/* Navigation Menu */
+.menu {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #22c1c3;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #000000;
+  transform: scale(1.1);
+}
+
+/* Highlight background behind link */
+.highlight {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+  width: 0;
+  height: 0;
+}
+
+/* Visitor Count */
+#visitor-count {
+  font-weight: bold;
+  color: #22c1c3;
+}
+
+.animal-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+.animal-card h3 {
+  margin-top: 0;
+}
+.animal-card button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.animal-card button:hover {
+  background: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  form {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+}
